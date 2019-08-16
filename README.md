@@ -1,2 +1,2 @@
 # MIPS_MONOCYCLE_VHDL
-Implemented monocycle in VHDL hardware description
+Implemented MIPS monocycle in VHDL hardware description
