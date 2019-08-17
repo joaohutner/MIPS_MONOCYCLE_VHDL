@@ -50,6 +50,10 @@ Basically everything
 - The command Jump and Link (jal)
 - The command Jump Register (jr)
 
+## License
+
+MIT
+
 ## Author
 
 João Victor Santos Hütner
