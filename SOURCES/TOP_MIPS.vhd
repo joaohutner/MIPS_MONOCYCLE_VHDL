@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 
-entity mips_monociclo_top is
+entity TOP_MIPS is
 	generic (
 	p_SIZE : integer := 32
 	);
@@ -11,9 +11,9 @@ entity mips_monociclo_top is
   i_RST			:	in std_logic
   );
   
-end entity mips_monociclo_top;
+end entity TOP_MIPS ;
 
-architecture arch1 of mips_monociclo_top is
+architecture arch1 of TOP_MIPS is
 signal w_OPERATION		: std_logic_vector(5 downto 0);
 signal w_ALUOp			: std_logic_vector(1 downto 0);
 signal w_REGDST			: std_logic;
@@ -25,7 +25,7 @@ signal w_Jump		      	: std_logic;
 signal w_Branch	      		: std_logic;
 
 begin
-u_control: entity work.mips_monociclo_control
+u_control: entity work.CONTROL_MIPS
   port map(
     i_OP		   	=> w_OPERATION,
     i_CLK			=> i_CLK,
@@ -41,7 +41,7 @@ u_control: entity work.mips_monociclo_control
     o_ALUOp			=> w_ALUOp	
   );
   
-u_datapath: entity work.mips_monociclo_datapath
+u_datapath: entity work.DATAPATH_MIPS
   generic map(
     p_SIZE => 32
   )
