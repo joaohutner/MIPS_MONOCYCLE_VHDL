@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 use ieee.std_logic_unsigned.all;
 --use ieee.std_logic_arith.all ?;
 
-entity mips_monociclo_datapath is
+entity DATAPATH_MIPS is
 generic (p_SIZE : integer :=  32);
   port(
   i_CLK   			: in std_logic;
@@ -22,9 +22,9 @@ generic (p_SIZE : integer :=  32);
   --Output to control
   o_OP		   		: out std_logic_vector(5 downto 0)
   );
-end mips_monociclo_datapath;
+end DATAPATH_MIPS;
 
-architecture arch1 of mips_monociclo_datapath is
+architecture arch1 of DATAPATH_MIPS is
 
   component SOMADOR is
     generic (p_SIZE : integer := 32);
