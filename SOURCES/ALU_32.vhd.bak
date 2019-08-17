@@ -1,0 +1,23 @@
+library ieee ;
+use ieee.std_logic_1164.all ;
+
+--tabs corrigidos
+entity ALU_32 is
+  port(
+  i_A					: in std_logic_vector(31 downto 0);
+  i_B					: in std_logic_vector(31 downto 0);
+  i_ALUOpOUT   	: in std_logic_vector(2 downto 0);
+  i_inB		   	: in std_logic;
+  o_R   				: out std_logic_vector(2 downto 0)
+  o_Zero				: out std_logic;
+  o_Overflow		: out std_logic
+  );
+end ALU_32;
+
+architecture arch1 of ALU_32 is
+begin
+  process (i_A,i_B)
+    begin
+	   o_R <= i_A when i_SEL = '0' else i_B;
+  end process;
+end arch1;

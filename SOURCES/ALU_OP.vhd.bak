@@ -1,0 +1,19 @@
+library ieee ;
+use ieee.std_logic_1164.all ;
+
+--tabs corrigidos
+entity ALU_OP is
+  port(
+  i_ALUOp   	: in std_logic_vector(1 downto 0);
+  i_INSTRUCT   : in std_logic_vector(5 downto 0);
+  o_R   			: out std_logic_vector(2 downto 0)
+  );
+end ALU_OP;
+
+architecture arch1 of ALU_OP is
+begin
+  process (i_A,i_B)
+    begin
+	   o_R <= i_A when i_SEL = '0' else i_B;
+  end process;
+end arch1;
